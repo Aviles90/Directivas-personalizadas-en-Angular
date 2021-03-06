@@ -10,18 +10,23 @@
                     formControlName="nombre">
         </div>
         <div class="col-auto">
-            <span   
-                    error-msg
-                    color="blue"
-                    mensaje="debe de ingrersar este campo"
+            <span   error-msg
+                    [mensaje]="texto1"
+                    [color]="color" 
                     *ngIf="tieneError('nombre')">                
             </span>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary"
+                    (click)="cambiar()">
                 Guardar
+            </button>
+            &nbsp;
+            <button class="btn btn-primary"
+                    (click)="cambiarColor()">
+                Cambiar Color
             </button>
         </div>
     </div>

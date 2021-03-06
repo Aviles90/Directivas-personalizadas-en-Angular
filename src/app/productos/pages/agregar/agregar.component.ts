@@ -13,10 +13,21 @@ export class AgregarComponent {
     nombre:['', Validators.required]
   });
 
+  texto1: string = 'Angel';
+  color: string = 'red';
+
   constructor( private fb: FormBuilder) { }
 
   tieneError(campo : string):boolean{
     return this.miFormulario.get(campo)?.invalid || false;
+  }
+
+  cambiar(){
+    this.texto1 = 'Juan Carlos';
+  }
+
+  cambiarColor(){
+    this.color = 'green';
   }
 
 }
