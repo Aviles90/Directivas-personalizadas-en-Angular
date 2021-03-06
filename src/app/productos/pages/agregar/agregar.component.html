@@ -10,11 +10,11 @@
                     formControlName="nombre">
         </div>
         <div class="col-auto">
-            <span   class="form-text"
+            <span   
                     error-msg
                     color="blue"
-                    *ngIf="tieneError('nombre')">
-                Este campo es requirido
+                    mensaje="debe de ingrersar este campo"
+                    *ngIf="tieneError('nombre')">                
             </span>
         </div>
     </div>
