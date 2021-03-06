@@ -14,7 +14,7 @@ export class AgregarComponent {
   });
 
   texto1: string = 'Angel';
-  color: string = 'red';
+  color: string = 'green';
 
   constructor( private fb: FormBuilder) { }
 
@@ -23,11 +23,12 @@ export class AgregarComponent {
   }
 
   cambiar(){
-    this.texto1 = 'Juan Carlos';
+    this.texto1 = Math.random().toString();
   }
 
   cambiarColor(){
-    this.color = 'green';
+    const color = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    this.color = color;
   }
 
 }
